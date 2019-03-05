@@ -1,10 +1,5 @@
 package AnonymousClasses;
 
-import jdk.nashorn.internal.objects.annotations.Function;
-import jdk.nashorn.internal.objects.annotations.Getter;
-
-import java.util.Comparator;
-
 public class HelloAnonymousClasses {
 
     interface DogBarking {
