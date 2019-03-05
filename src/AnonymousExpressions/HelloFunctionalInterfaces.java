@@ -1,4 +1,4 @@
-package AnonymousClasses;
+package AnonymousExpressions;
 
 import java.util.ArrayList;
 import java.util.List;

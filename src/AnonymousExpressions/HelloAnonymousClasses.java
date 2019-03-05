@@ -1,4 +1,4 @@
-package AnonymousClasses;
+package AnonymousExpressions;
 
 public class HelloAnonymousClasses {
 
