@@ -1,2 +1,2 @@
 # JavaExperiments
-Learning advanced concepts in Java
+Learning programming concepts in Java
