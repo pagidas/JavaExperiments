@@ -1,11 +1,19 @@
 package AnonymousClasses;
 
+import jdk.nashorn.internal.objects.annotations.Function;
+import jdk.nashorn.internal.objects.annotations.Getter;
+
+import java.util.Comparator;
+
 public class HelloAnonymousClasses {
 
     interface DogBarking {
         void bark();
         void bark(String dog);
-        void barkTo(String dog);
+
+        default void barkTo(String dog) {
+            bark(dog);
+        }
     }
 
     public void DogsBark() {
@@ -22,11 +30,6 @@ public class HelloAnonymousClasses {
 
             @Override
             public void bark(String dog) {
-                barkTo(dog);
-            }
-
-            @Override
-            public void barkTo(String dog) {
                 System.out.println("Labrador Retriever barks at " + dog + "!");
             }
         }
@@ -34,8 +37,8 @@ public class HelloAnonymousClasses {
         LabradorRetriever labradorRetriever = new LabradorRetriever();
 
         /*
-         *  Creates an anonymous class and calls the
-         *  method directly from the specified reference.
+         *  Creates an anonymous class, implementing that interface
+         *  and calls the method directly from the specified reference.
          */
         DogBarking beagle = new DogBarking() {
             @Override
@@ -45,18 +48,13 @@ public class HelloAnonymousClasses {
 
             @Override
             public void bark(String dog) {
-                barkTo(dog);
-            }
-
-            @Override
-            public void barkTo(String dog) {
-                System.out.println("Beagle barks at " + dog + "!");
+                System.out.println("Beagle barks at " + dog + "!");;
             }
         };
 
         labradorRetriever.bark();
         beagle.bark("Labrador");
-        labradorRetriever.bark("Beagle");
+        labradorRetriever.barkTo("Beagle");
     }
 
     public static void main(String[] args) {
