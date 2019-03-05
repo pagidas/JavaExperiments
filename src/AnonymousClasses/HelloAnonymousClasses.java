@@ -11,7 +11,7 @@ public class HelloAnonymousClasses {
         }
     }
 
-    public void DogsBark() {
+    public void dogsBark() {
 
         /*
          *  Traditional way to implement an interface by declaring a new Class
@@ -55,7 +55,7 @@ public class HelloAnonymousClasses {
     public static void main(String[] args) {
 
         HelloAnonymousClasses app = new HelloAnonymousClasses();
-        app.DogsBark();
+        app.dogsBark();
 
     }
 
