@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class HelloFunctionalInterfaces {
+/*
+ *  This class demonstrates how to use the Predicate<T> functional interface
+ *  in a generic way to "fetch" any object of an entity with one method, giving
+ *  the criteria the moment we need them
+ */
+public class HelloPredicateInterface {
 
     static List<Person> people = new ArrayList<Person>();
 
@@ -35,7 +40,7 @@ public class HelloFunctionalInterfaces {
 
     public static void main(String[] args) {
 
-        HelloFunctionalInterfaces app = new HelloFunctionalInterfaces();
+        HelloPredicateInterface app = new HelloPredicateInterface();
         app.run();
 
     }
