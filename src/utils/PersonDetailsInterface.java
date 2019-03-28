@@ -4,9 +4,10 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
-public interface PersonNameInterface {
+@FunctionalInterface
+public interface PersonDetailsInterface {
 
-    void printPersonName(Person person);
+    void printPersonDetail(Person person);
 
     default void printPersonNameUtf8To(Person person, OutputStream output) {
         try {
